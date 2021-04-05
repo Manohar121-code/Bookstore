@@ -93,8 +93,9 @@ public class ControllerServlet extends HttpServlet {
 		String title = request.getParameter("title");
 		String author = request.getParameter("author");
 		float price = Float.parseFloat(request.getParameter("price"));
+		int pages = Integer.parseInt(request.getParameter("pages"));
 
-		Book newBook = new Book(title, author, price);
+		Book newBook = new Book(title, author, price, pages);
 		bookDAO.insertBook(newBook);
 		response.sendRedirect("list");
 	}
@@ -105,8 +106,9 @@ public class ControllerServlet extends HttpServlet {
 		String title = request.getParameter("title");
 		String author = request.getParameter("author");
 		float price = Float.parseFloat(request.getParameter("price"));
+		int pages = Integer.parseInt(request.getParameter("pages"));
 
-		Book book = new Book(id, title, author, price);
+		Book book = new Book(id, title, author, price, pages);
 		bookDAO.updateBook(book);
 		response.sendRedirect("list");
 	}

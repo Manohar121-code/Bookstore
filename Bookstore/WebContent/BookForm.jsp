@@ -61,6 +61,14 @@
                 </td>
             </tr>
             <tr>
+                <th>Pages: </th>
+                <td>
+                	<input type="text" name="pages" size="5"
+                			value="<c:out value='${book.pages}' />"
+                	/>
+                </td>
+            </tr>
+            <tr>
             	<td colspan="2" align="center">
             		<input type="submit" value="Save" />
             	</td>

@@ -11,6 +11,7 @@ public class Book {
 	protected String title;
 	protected String author;
 	protected float price;
+	protected int pages;
 
 	public Book() {
 	}
@@ -19,8 +20,8 @@ public class Book {
 		this.id = id;
 	}
 
-	public Book(int id, String title, String author, float price) {
-		this(title, author, price);
+	public Book(int id, String title, String author, float price, int pages) {
+		this(title, author, price, pages);
 		this.id = id;
 	}
 	
@@ -28,6 +29,13 @@ public class Book {
 		this.title = title;
 		this.author = author;
 		this.price = price;
+	}
+	
+	public Book(String title, String author, float price, int pages) {
+		this.title = title;
+		this.author = author;
+		this.price = price;
+		this.pages = pages;
 	}
 
 	public int getId() {
@@ -60,6 +68,14 @@ public class Book {
 
 	public void setPrice(float price) {
 		this.price = price;
+	}
+
+	public int getPages() {
+		return pages;
+	}
+
+	public void setPages(int pages) {
+		this.pages = pages;
 	}
 
 }
